@@ -103,3 +103,17 @@ sortByLength(["Leonardo", "Michelangelo", "Raphael", "Donatello"])
 sortByLength(["Turing", "Einstein", "Jung"])
 ➞ ["Jung", "Turing", "Einstein"]
 ```
+
+### 7.[Phone Number Formatting](https://edabit.com/challenge/Z6oY6EWwT9rde8YXm)
+```javascript
+function formatPhoneNumber(numbers) {
+	return `(${numbers.slice(0,3).join('')}) ${numbers.slice(3,6).join('')}-${numbers.slice(6,numbers.length).join('')}`;
+}
+
+//Others solutions
+function formatPhoneNumber(numbers) {
+  let masked = '(###) ###-####';
+  numbers.forEach(v => masked = masked.replace("#", v));
+  return masked;
+}
+```
